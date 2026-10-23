@@ -47,10 +47,10 @@ index together.
 
 ## 4. Open a pull request
 
-CI runs `python3 tools/build_index.py --check`; a pull request fails if the
-index is stale or any package is invalid. A maintainer listens to the audio and
-checks the license before merging. Merged themes are available in the app
-immediately after the index update, no app release needed.
+Run `python3 tools/build_index.py --check` before pushing. A maintainer reruns
+the same check, listens to the audio and checks the license before merging.
+Merged themes are available in the app immediately after the index update, no
+app release needed.
 
 ## Review criteria
 
