@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "themes": [
+    {
+      "id": "chime",
+      "name": "Chime",
+      "author": "Audex Revival",
+      "description": "Bright struck-bell tones for every feedback event. C6 clicks and rising two-note cues make buttons, focus changes and charging easy to tell apart without overwhelming speech.",
+      "version": "1.0.0",
+      "license": "CC0-1.0",
+      "sounds": 15,
+      "file": "themes/chime-1.0.0.audextheme",
+      "sha256": "0c2cf013bb8b6a74949963b622b53dcbd3ae317addcb9152c54ed809a3bd51a0",
+      "size": 191268,
+      "minAppVersion": 610
+    },
+    {
+      "id": "pulse",
+      "name": "Pulse",
+      "author": "Audex Revival",
+      "description": "A softer, lower triangle-wave set. Short woody taps for clicks and focus, with gentle falling and rising pairs for gestures, charging and screen changes. Designed to sit under screen-reader speech.",
+      "version": "1.0.0",
+      "license": "CC0-1.0",
+      "sounds": 15,
+      "file": "themes/pulse-1.0.0.audextheme",
+      "sha256": "7f5eac580487cbe28ef8785e052d21735bf72d161ef147ec6fb2e9988f3eef69",
+      "size": 200414,
+      "minAppVersion": 610
+    }
+  ]
+}

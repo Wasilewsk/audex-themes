@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Wasilewsk/audex-themes/schema/theme.schema.json",
+  "title": "Audex Revival theme manifest",
+  "description": "theme.json inside a .audextheme package.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "name", "author", "description", "version", "license", "sounds"],
+  "properties": {
+    "schema": {
+      "const": 1,
+      "description": "Manifest format version."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,31}$",
+      "description": "Stable store id, also the package file name prefix."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40,
+      "description": "SPDX identifier or a short license statement."
+    },
+    "sounds": {
+      "type": "object",
+      "description": "Event id to package-relative audio path. 'click' is required.",
+      "required": ["click"],
+      "additionalProperties": false,
+      "propertyNames": {
+        "enum": [
+          "click",
+          "view_enter",
+          "view_exit",
+          "focus_interactive",
+          "focus_non_interactive",
+          "long_click",
+          "scroll",
+          "gesture_begin",
+          "gesture_end",
+          "select",
+          "window_state",
+          "charger_plugged",
+          "charger_unplugged",
+          "screen_on",
+          "screen_off"
+        ]
+      },
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "string",
+          "pattern": "^sounds/[A-Za-z0-9._-]+\\.(wav|ogg|mp3|mid|m4a)$"
+        }
+      }
+    }
+  }
+}
