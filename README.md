@@ -1,5 +1,7 @@
 # Audex Revival theme store
 
+[![Validate theme store](https://github.com/Wasilewsk/audex-themes/actions/workflows/validate.yml/badge.svg)](https://github.com/Wasilewsk/audex-themes/actions/workflows/validate.yml)
+
 Community sound themes for [Audex Revival](https://github.com/Wasilewsk/audex-revival), the
 accessible sound-feedback app for blind and low-vision Android users.
 
@@ -39,8 +41,9 @@ The fastest path is from the app itself:
    and add it to `themes/`.
 4. Clone the repository locally, run `python3 tools/build_index.py`, and commit
    the regenerated `index.json` with your package.
-5. Run `python3 tools/build_index.py --check`, then open a pull request. A
-   maintainer reruns the validator and reviews the audio before merging.
+5. Run `python3 tools/build_index.py --check`, then open a pull request.
+   GitHub Actions runs the same validation on the pull request, and a maintainer
+   reviews the audio before merging.
 
 If you prefer to build a package by hand, see [CONTRIBUTING.md](CONTRIBUTING.md)
 and [`schema/theme.schema.json`](schema/theme.schema.json).
